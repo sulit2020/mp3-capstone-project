@@ -24,6 +24,7 @@ import Order from "./components/order/Order";
 import CreateCustomer from "./components/customer/CreateCustomer";
 import EditCustomer from "./components/customer/EditCustomer";
 import CustomerList from "./components/customer/Customer";
+import UserForm from "./views/UserForm";
 
 
 
@@ -45,6 +46,7 @@ function App() {
                                         element={<Dashboard />}
                                     />
                                     <Route path="/users" element={<Users />} />
+                                    <Route path="/users/new" element={<UserForm />} />
                                     <Route
                                         exact
                                         path="/products"
