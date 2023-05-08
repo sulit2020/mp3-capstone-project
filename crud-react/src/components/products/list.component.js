@@ -13,7 +13,7 @@ export default function ProductList() {
 
     const fetchProducts = async () => {
         await axios
-            .get(`http://localhost:8000/api/products`)
+            .get(`https://api.jeabcesewil.com/api/products`)
             .then(({ data }) => {
                 setProducts(data);
             });
@@ -37,7 +37,7 @@ export default function ProductList() {
         }
 
         await axios
-            .delete(`http://localhost:8000/api/products/${id}`)
+            .delete(`https://api.jeabcesewil.com/api/products/${id}`)
             .then(({ data }) => {
                 Swal.fire({
                     icon: "success",
@@ -93,7 +93,7 @@ export default function ProductList() {
                                                 <td>
                                                     <img
                                                         width="50px"
-                                                        src={`http://localhost:8000/storage/product/image/${row.image}`}
+                                                        src={`https://api.jeabcesewil.com/storage/product/image/${row.image}`}
                                                     />
                                                 </td>
                                                 <td>{row.price}</td>

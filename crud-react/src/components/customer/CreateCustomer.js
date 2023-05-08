@@ -34,7 +34,7 @@ export default function CreateCustomer() {
 
 
 
-    await axios.post(`http://localhost:8000/api/customers`, formData).then(({data})=>{
+    await axios.post(`https://api.jeabcesewil.com/api/customers`, formData).then(({data})=>{
       Swal.fire({
         icon:"success",
         text:data.message

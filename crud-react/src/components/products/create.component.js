@@ -34,7 +34,7 @@ export default function CreateProduct() {
 
 
 
-    await axios.post(`http://localhost:8000/api/products`, formData).then(({data})=>{
+    await axios.post(`https://api.jeabcesewil.com/api/products`, formData).then(({data})=>{
       Swal.fire({
         icon:"success",
         text:data.message
@@ -93,7 +93,7 @@ export default function CreateProduct() {
                       <Col>
                         <Form.Group controlId="Description">
                             <Form.Label>Description</Form.Label>
-                            <Form.Control as="text" value={description} onChange={(event)=>{
+                            <Form.Control type="text" value={description} onChange={(event)=>{
                               setDescription(event.target.value)
                             }}/>
                         </Form.Group>

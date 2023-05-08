@@ -24,7 +24,7 @@ export default function EditCustomer() {
   },[])
 
   const fetchCustomer = async () => {
-    await axios.get(`http://localhost:8000/api/customers/${id}`).then(({data})=>{
+    await axios.get(`https://api.jeabcesewil.com/api/customers/${id}`).then(({data})=>{
       const { firstname, lastname } = data.customer
       setFirstname(firstname)
       setLastname(lastname)
@@ -53,7 +53,7 @@ export default function EditCustomer() {
       formData.append('image', image)
     }
 
-    await axios.post(`http://localhost:8000/api/customers/${id}`, formData).then(({data})=>{
+    await axios.post(`https://api.jeabcesewil.com/api/customers/${id}`, formData).then(({data})=>{
       Swal.fire({
         icon:"success",
         text:data.message
